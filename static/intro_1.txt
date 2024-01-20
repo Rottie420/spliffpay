@@ -1,0 +1,5 @@
+Spliffpay a lightweight Point-of-Sale (POS) system. 
+tailored for seamless integration with ERC-20 tokens, 
+spliffpay delivers an intuitive experience for 
+businesses ready to immerse themselves in the 
+future of digital payments through cryptocurrency.

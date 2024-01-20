@@ -1,0 +1,36 @@
+
+
+At Spliffpay, we prioritize decentralized privacy and security for our users. This Privacy Policy outlines how we handle the collection, utilization, and protection of your personal information in a decentralized context. By engaging with Spliffpay, you acknowledge and consent to the practices described in this policy.
+
+<h5 style="font-weight: bold; color: silver">Information We Collect</h5>
+1.1 Transaction Data: We collect decentralized information related to your transactions on the Spliffpay platform, including transaction amounts, dates, and wallet addresses.
+
+1.2 Subscription Details: If you opt for a subscription plan, we collect decentralized information related to your subscription, including plan details and billing information.
+
+<h5 style="font-weight: bold; color: silver">How We Use Your Information</h5>
+2.1 Transaction Processing: We utilize your decentralized information to facilitate and process transactions on the decentralized Spliffpay platform.
+
+2.2 Subscription Services: If you subscribe to our decentralized services, we use your information to provide and manage the subscription features you have chosen.
+
+<h5 style="font-weight: bold; color: silver">Data Security</h5>
+3.1 Encryption: We implement industry-standard encryption measures to protect your decentralized personal and transaction data.
+
+3.2 Third-Party Wallets: If you use decentralized third-party wallets (e.g., Metamask), please refer to their privacy and security policies, as we do not control the security practices of external wallets.
+
+<h5 style="font-weight: bold; color: silver">Sharing Your Information</h5>
+4.1 Decentralized Service Providers: We may share your decentralized information with trusted decentralized service providers to assist with transaction processing and other essential services.
+
+4.2 Legal Compliance: We may disclose your decentralized information if required by decentralized law, legal process, or decentralized government authorities.
+
+<h5 style="font-weight: bold; color: silver">Your Choices</h5>
+5.1 Subscription Preferences: Users have the option to manage and cancel their decentralized subscription at any time.
+
+<h5 style="font-weight: bold; color: silver">Changes to this Privacy Policy</h5>
+6.1 Updates: We may update this Privacy Policy periodically. Users will be notified of any changes, and continued use of decentralized Spliffpay after modifications constitutes acceptance of the updated policy.
+
+<h5 style="font-weight: bold; color: silver">Contact Us</h5>
+7.1 Questions: For questions or concerns regarding this Decentralized Privacy Policy, please contact us through the designated decentralized channels provided on the Spliffpay platform.
+
+Thank you for entrusting Spliffpay with your decentralized transactions. We are committed to maintaining the confidentiality and security of your information.
+
+Last Updated: 20-01-2024
