@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__, template_folder='templates', static_folder='static')
 app.config['SECRET_KEY'] = 'my_secret_key'
 
-@app.route('/home', methods=['GET'])
+@app.route('/', methods=['GET'])
 def home_page():
     f = open(r'static\intro_1.txt', encoding='utf-8', mode='r')
     intro_1 = f.read()
@@ -17,7 +17,7 @@ def home_page():
     intro_3 = f.read()
     f.close()
 
-    return render_template('home.html', intro_1=intro_1, intro_2=intro_2, intro_3=intro_3)
+    return render_template('index.html', intro_1=intro_1, intro_2=intro_2, intro_3=intro_3)
 
 
 @app.route('/airdrop', methods=['GET'])
