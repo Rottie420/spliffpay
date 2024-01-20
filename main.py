@@ -5,15 +5,15 @@ app.config['SECRET_KEY'] = 'my_secret_key'
 
 @app.route('/home', methods=['GET'])
 def home_page():
-    f = open('static\intro_1.txt', encoding='utf-8', mode='r')
+    f = open(r'static\intro_1.txt', encoding='utf-8', mode='r')
     intro_1 = f.read()
     f.close()
 
-    f = open('static\intro_2.txt', encoding='utf-8', mode='r')
+    f = open(r'static\intro_2.txt', encoding='utf-8', mode='r')
     intro_2 = f.read()
     f.close()
 
-    f = open('static\intro_3.txt', encoding='utf-8', mode='r')
+    f = open(r'static\intro_3.txt', encoding='utf-8', mode='r')
     intro_3 = f.read()
     f.close()
 
@@ -22,15 +22,15 @@ def home_page():
 
 @app.route('/airdrop', methods=['GET'])
 def airdrop_page():
-    f = open('static\drop_1.txt', encoding='utf-8', mode='r')
+    f = open(r'static\drop_1.txt', encoding='utf-8', mode='r')
     drop_1 = f.read()
     f.close()
 
-    f = open('static\drop_2.txt', encoding='utf-8', mode='r')
+    f = open(r'static\drop_2.txt', encoding='utf-8', mode='r')
     drop_2 = f.readlines()
     f.close()
 
-    f = open('static\intro_3.txt', encoding='utf-8', mode='r')
+    f = open(r'static\intro_3.txt', encoding='utf-8', mode='r')
     intro_3 = f.read()
     f.close()
 
@@ -39,7 +39,7 @@ def airdrop_page():
 
 @app.route('/faqs', methods=['GET'])
 def faqs_page():
-    f = open('static\intro_3.txt', encoding='utf-8', mode='r')
+    f = open(r'static\intro_3.txt', encoding='utf-8', mode='r')
     intro_3 = f.read()
     f.close()
 
@@ -93,7 +93,7 @@ def tc_page():
     tc = f.read()
     f.close()
 
-    f = open('static\intro_3.txt', encoding='utf-8', mode='r')
+    f = open(r'static\intro_3.txt', encoding='utf-8', mode='r')
     intro_3 = f.read()
     f.close()
 
@@ -105,7 +105,7 @@ def pp_page():
     pp = f.read()
     f.close()
 
-    f = open('static\intro_3.txt', encoding='utf-8', mode='r')
+    f = open(r'static\intro_3.txt', encoding='utf-8', mode='r')
     intro_3 = f.read()
     f.close()
 
