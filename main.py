@@ -17,7 +17,7 @@ def home_page():
     intro_3 = f.read()
     f.close()
 
-    return render_template('index.html', intro_1=intro_1, intro_2=intro_2, intro_3=intro_3)
+    return render_template('spliffpay-cryptocurrency-payment-tool', intro_1=intro_1, intro_2=intro_2, intro_3=intro_3)
 
 
 @app.route('/airdrop', methods=['GET'])
