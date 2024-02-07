@@ -202,7 +202,7 @@ body {
         border-radius: 8px;
         border: none;
         padding-top: 30px;
-        margin-bottom: 400px;
+        margin-bottom: 100px;
 }
 
 .footer-custom {
@@ -357,7 +357,7 @@ body {
     }
 
     #card-problems {
-        background-image: linear-gradient(to top, #121212, #161617, #1a1a1b, #1f1e1f, #232223, #272626, #2a292a, #2e2d2d, #323131, #353434, #393838, #3d3c3c);
+        background: rgb(25, 25, 25);
         padding: 25px; 
         border-radius: 20px;
         font-family: 'Roboto Condensed' !important;
@@ -385,11 +385,68 @@ body {
 }
 
 #card-problems {
-        background-image: linear-gradient(to top, #121212, #161617, #1a1a1b, #1f1e1f, #232223, #272626, #2a292a, #2e2d2d, #323131, #353434, #393838, #3d3c3c);
+        background: rgb(25, 25, 25);
         padding: 25px; 
         border-radius: 20px;
         font-family: 'Roboto Condensed';
         font-size: 18px;
+}
+
+#faq_header_1,
+#faq_header_2,
+#faq_header_3,
+#faq_header_4,
+#faq_header_5,
+#faq_header_6,
+#faq_header_7,
+#faq_header_8,
+#faq_header_9,
+#faq_header_10 {
+            background: rgb(25, 25, 25);
+}
+
+#faq_content_1,
+#faq_content_2,
+#faq_content_3,
+#faq_content_4,
+#faq_content_5,
+#faq_content_6,
+#faq_content_7,
+#faq_content_8,
+#faq_content_9,
+#faq_content_10 {
+            background: transparent;
+            border-color:  rgb(25, 25, 25);
+            margin-bottom: 10px;
+            color: silver;
+
+}
+
+#faq_content_2 i.bi-plus-lg, 
+#faq_content_2 i.bi-dash-lg,
+#faq_content_3 i.bi-plus-lg, 
+#faq_content_3 i.bi-dash-lg,
+#faq_content_4 i.bi-plus-lg, 
+#faq_content_4 i.bi-dash-lg,
+#faq_content_5 i.bi-plus-lg, 
+#faq_content_5 i.bi-dash-lg,
+#faq_content_6 i.bi-plus-lg, 
+#faq_content_6 i.bi-dash-lg,
+#faq_content_7 i.bi-plus-lg, 
+#faq_content_7 i.bi-dash-lg,
+#faq_content_8 i.bi-plus-lg, 
+#faq_content_8 i.bi-dash-lg,
+#faq_content_9 i.bi-plus-lg, 
+#faq_content_9 i.bi-dash-lg,
+#faq_content_10 i.bi-plus-lg, 
+#faq_content_10 i.bi-dash-lg {
+            position: absolute;
+            z-index: 1;
+}
+
+#span-text {
+        display: inline-block;
+        padding-left: 20px;
 }
 
 </style>
@@ -409,7 +466,7 @@ body {
                     <a class="nav-link" href="#">Rewards</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/faqs">FAQs</a>
+                    <a class="nav-link" href="#faq_content_1">FAQs</a>
                 </li>
             </ul>
             <a id="open-overlay-btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -425,7 +482,7 @@ body {
                     <a class="nav-link" href="#">Rewards</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/faqs">FAQs</a>
+                    <a class="nav-link" href="#faq_content_1">FAQs</a>
                 </li>
             </div>
         </div>
@@ -437,7 +494,7 @@ body {
             <div class="card-deck justify-content-between">  
                 <div class="card h-50  order-md-first" id="img_1">
                     <div class="card-body">
-                        <img src="static\airdrop_site_1.webp" class="img-fluid" alt="...">
+                        <img src="static\easy-crypto-payment.jpg" class="img-fluid" alt="...">
                     </div>
                 </div>
                 <div class="card h-50 order-md-last" id="txt_1">
@@ -463,7 +520,7 @@ body {
 
                     <div class="col-md-7" id="btn-position">
                         <a href="https://www.spliffpay.biz" class="btn btn-custom-1 btn-md btn-block" id="btn-settings">
-                          <span>Get Started&nbsp;&nbsp;</span>
+                          <span>Start For Free Now&nbsp;&nbsp;</span>
                           <i class="bi bi-arrow-right-circle"></i>
                         </a>
                     </div>  
@@ -478,7 +535,7 @@ body {
             <div class="card-deck justify-content-between">
                 <div class="card h-50  order-md-last" id="img_1">
                     <div class="card-body">
-                        <img src="static\airdrop_site_2.webp" class="img-fluid" alt="...">
+                        <img src="static\easy-crypto-payment-desktop.jpg" class="img-fluid" alt="...">
                     </div>
                 </div>  
                 <div class="card h-50 order-md-first" id="txt_2">
@@ -643,24 +700,242 @@ body {
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row justify-content-center text-center">
-        <div class="col-md-9">
-            <div class="card" id="airdrop-banner">
-                <div class="card-body">
-                    <h3 style="color: white; font-weight: bold;">Exciting news! Airdrop & Bounty Program.</h3>
-                    <h6 class="text-white-50">Airdrop & Bounty to reward our early supporters. Join us in revolutionizing the crypto Point-of-Sale experience!</h6>
-                    <div class="col-md-4 mx-auto">
-                        <a href="/airdrop" class="btn btn-custom-2 btn-md btn-block" id="btn-settings">
-                          <span>Let's go&nbsp;&nbsp;</span>
-                          <i class="bi bi-arrow-right-circle"></i>
-                        </a>
-                    </div>  
-                </div>
-            </div>     
+
+<div class="container-fluid" id="txt-2-img-2-margin-top">
+    <div class="row justify-content-center text-left">
+        <div class="col-md-5">
+            <h5 id="title_1">Your questions answered.</h3>
         </div>
     </div>
 </div>
+
+<div class="container-fluid" style="margin-top: 10px; margin-bottom: 400px;">
+    <div class="row justify-content-md-center">
+        <div class="col-md-5">  
+            <div id="accordion" class="accordion" role="tablist" aria-multiselectable="true">
+
+                <div class="card h-100" id="faq_content_1">
+                    <div class="card-header text-white" role="tab" id="faq_header_1">
+                        <div  data-bs-toggle="collapse" href="#collapse_1" aria-expanded="true" aria-controls="collapse_1">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_1"></i>
+                                    &nbsp;&nbsp;What is Spliffpay?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_1" class="collapse" role="tabpanel" aria-labelledby="faq_header_1">
+                        <div class="card-body">
+                            <p style="padding: 20px;">Spliffpay is a Software as a Service (SaaS) solution designed to serve as a cost-effective Point-of-Sale (POS) system. This platform is meticulously crafted for effortless integration with ERC-20 tokens, providing businesses with a user-friendly and intuitive experience. Spliffpay is ideal for enterprises that are eager to embrace the future of digital payments by incorporating cryptocurrency into their operations. With a focus on simplicity and efficiency, Spliffpay empowers businesses to navigate the evolving landscape of digital transactions seamlessly, offering a modern and forward-looking solution for their Point-of-Sale needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card h-100" id="faq_content_2">
+                    <div class="card-header text-white" role="tab" id="faq_header_2">
+                        <div data-bs-toggle="collapse" href="#collapse_2" aria-expanded="true" aria-controls="collapse_2">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_2"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    How does Spliffpay integrate with ERC-20 tokens?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_2" class="collapse" role="tabpanel" aria-labelledby="faq_header_2">
+                        <div class="card-body">
+                            <p style="padding: 20px;">The integration is facilitated by connecting Spliffpay with MetaMask, the leading Ethereum wallet extension. By leveraging the MetaMask API, Spliffpay ensures a smooth and intuitive experience for businesses, allowing users to make payments directly from their MetaMask wallets. This integration not only streamlines the process but also opens the door to the future of digital payments, making Spliffpay an ideal choice for businesses ready to embrace the potential of ERC-20 tokens and the evolving landscape of cryptocurrency transactions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card h-100" id="faq_content_3">
+                    <div class="card-header text-white" role="tab" id="faq_header_3">
+                        <div data-bs-toggle="collapse" href="#collapse_3" aria-expanded="true" aria-controls="collapse_3">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_3"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    What sets Spliffpay apart from traditional POS systems?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_3" class="collapse" role="tabpanel" aria-labelledby="faq_header_3">
+                        <div class="card-body">
+                            <p style="padding: 20px;">Spliffpay stands out from traditional POS systems by harnessing the power of Ethereum blockchain technology. With a focus on simplicity through a low-code approach, it offers businesses a lightweight and customizable payment solution. The decentralized nature of Spliffpay enhances security, while integration with a leading Ethereum ecosystem provides users access to a diverse range of blockchain services. In summary, Spliffpay redefines payments with efficiency, customization, and heightened security in the evolving landscape of digital transactions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card h-100" id="faq_content_4">
+                    <div class="card-header text-white" role="tab" id="faq_header_4">
+                        <div data-bs-toggle="collapse" href="#collapse_4" aria-expanded="true" aria-controls="collapse_4">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_4"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    Can Spliffpay be used by any type of business?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_4" class="collapse" role="tabpanel" aria-labelledby="faq_header_4">
+                        <div class="card-body">
+                            <p style="padding: 20px;">Yes, Spliffpay is versatile and suitable for various businesses, regardless of their size or industry. Whether you run a retail store, restaurant, or any other type of business, Spliffpay provides a user-friendly POS solution.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card h-100" id="faq_content_5">
+                    <div class="card-header text-white" role="tab" id="faq_header_5">
+                        <div  data-bs-toggle="collapse" href="#collapse_5" aria-expanded="true" aria-controls="collapse_5">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_5"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    How user-friendly is Spliffpay for businesses unfamiliar with cryptocurrency?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_5" class="collapse" role="tabpanel" aria-labelledby="faq_header_5">
+                        <div class="card-body">
+                            <p style="padding: 20px;">Spliffpay is designed with simplicity in mind. Even for businesses unfamiliar with cryptocurrency, the user interface is intuitive, making it easy for users to navigate and process transactions without extensive technical knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card h-100" id="faq_content_6">
+                    <div class="card-header text-white" role="tab" id="faq_header_6">
+                        <div data-bs-toggle="collapse" href="#collapse_6" aria-expanded="true" aria-controls="collapse_6">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_6"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    Is there training provided for businesses adopting Spliffpay?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_6" class="collapse" role="tabpanel" aria-labelledby="faq_header_6">
+                        <div class="card-body">
+                            <p style="padding: 20px;">Yes, Spliffpay offers comprehensive training and support for businesses integrating the system. This includes tutorials, guides, and customer support to ensure a smooth transition to the new POS system.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card h-100" id="faq_content_7">
+                    <div class="card-header text-white" role="tab" id="faq_header_7">
+                        <div  data-bs-toggle="collapse" href="#collapse_7" aria-expanded="true" aria-controls="collapse_7">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_7"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    Can users use Spliffpay without a subscription?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_7" class="collapse" role="tabpanel" aria-labelledby="faq_header_7">
+                        <div class="card-body">
+                            <p style="padding: 20px;">Basic access to Spliffpay may be available without a subscription, but users opting for the subscription model unlock additional features and transaction capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card h-100" id="faq_content_8">
+                    <div class="card-header text-white" role="tab" id="faq_header_8">
+                        <div  data-bs-toggle="collapse" href="#collapse_8" aria-expanded="true" aria-controls="collapse_8">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_8"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    How does Spliffpay differ from other payment platforms regarding fees?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_8" class="collapse" role="tabpanel" aria-labelledby="faq_header_8">
+                        <div class="card-body">
+                            <p style="padding: 20px;">Spliffpay sets itself apart by offering a unique fee structure—no transaction fees. Instead, all fees are seamlessly handled through the user's Metamask wallet. This innovative approach not only eliminates transaction costs but also leverages the convenience of Metamask for a seamless and user-friendly payment experience. It's a fee model designed to prioritize transparency and user empowerment in the world of digital transactions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card h-100" id="faq_content_9">
+                    <div class="card-header text-white" role="tab" id="faq_header_9">
+                        <div  data-bs-toggle="collapse" href="#collapse_9" aria-expanded="true" aria-controls="collapse_9">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_9"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    What advantages does the subscription model offer to users?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_9" class="collapse" role="tabpanel" aria-labelledby="faq_header_9">
+                        <div class="card-body">
+                            <p style="padding: 20px;">Spliffpay operates on a subscription-based model, where users pay a subscription fee to gain access to additional transaction capabilities. The subscription model provides users with expanded transaction capabilities beyond basic usage. Subscribers can enjoy increased transaction volumes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card h-100" id="faq_content_10">
+                    <div class="card-header text-white" role="tab" id="faq_header_10">
+                        <div  data-bs-toggle="collapse" href="#collapse_10" aria-expanded="true" aria-controls="collapse_10">
+                            <h6 class="mb-0">
+                                <span>
+                                    <i class="bi bi-plus-lg" id="icon_10"></i>
+                                </span>
+                                <span class="ml-2" id="span-text">
+                                    Does Spliffpay offer refunds for transactions and subscriptions?
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <div id="collapse_10" class="collapse" role="tabpanel" aria-labelledby="faq_header_10">
+                        <div class="card-body">
+                            <p style="padding: 20px;">No, Spliffpay does not provide refunds. As a blockchain-based platform, transactions, including subscription fees, are irreversible. The nature of blockchain transactions, which includes subscription fees, is irreversible. Once a transaction is recorded on the blockchain, it cannot be undone. This policy aligns with the principles of transparency and immutability inherent in blockchain technology.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleIcon(event, iconId) {
+        const icon = document.getElementById(iconId);
+        const iconClass = icon.classList.contains('bi-plus-lg') ? 'bi-plus-lg' : 'bi-dash-lg';
+
+        if (event.type === 'show.bs.collapse') {
+            icon.classList.replace(iconClass, 'bi-dash-lg');
+        } else if (event.type === 'hide.bs.collapse') {
+            icon.classList.replace(iconClass, 'bi-plus-lg');
+        }
+    }
+
+    ['collapse_1', 'collapse_2', 'collapse_3', 'collapse_4', 'collapse_5', 
+    'collapse_6', 'collapse_7', 'collapse_8', 'collapse_9', 'collapse_10'].forEach(function (id, index) {
+        const iconId = 'icon_' + (index + 1);
+        document.getElementById(id).addEventListener('show.bs.collapse', (event) => toggleIcon(event, iconId));
+        document.getElementById(id).addEventListener('hide.bs.collapse', (event) => toggleIcon(event, iconId));
+    });
+</script>
 <footer class="footer-custom" id="footer-navbar">
     <div class="container-fluid">
         <div class="row row-cols-md-1 row-cols-md-2 g-2 justify-content-center text-center"></div>
@@ -688,7 +963,7 @@ body {
                             <ul class="navbar-selections text-white">
                                 <li><a href="/airdrop">Airdrops</a></li>
                                 <li><a href="#">Rewards</a></li>
-                                <li><a href="faqs">FAQ's</a></li>
+                                <li><a href="#faq_content_1">FAQ's</a></li>
                             </ul>
                         </div>
                     </div>                    
