@@ -71,12 +71,27 @@
 </head>
 <body>
 <style>
+
 body {
         background-color: black;
+        z-index: -5;
 }
 
 .card-body {
         padding: 0;
+}
+
+
+#lines {
+    background-size: 40px 40px;    
+    background-image:repeating-linear-gradient(0deg, rgb(43, 42, 42),rgb(43, 42, 42) 1px, transparent 1px, transparent 40px),repeating-linear-gradient(-90deg, rgb(43, 42, 42),rgb(43, 42, 42) 1px, transparent 1px, transparent 40px);
+    height:100%;
+    width:100%;
+    opacity:0.14;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-4;
 }
 
 #img_1 {
@@ -87,7 +102,7 @@ body {
 }
 
 #txt_1 {
-        background-color: BLACK;
+        background-color: transparent;
         border-style: None;
         margin-left: 100px;
         padding-left: 20px;
@@ -112,7 +127,7 @@ body {
 }
 
 #txt_3 {
-        background-color: BLACK;
+        background-color: transparent;
         border-style: None;
         margin-top: 50px;
         padding-left: 0;
@@ -477,6 +492,8 @@ body {
 
 </style>
 <div class="container-fluid">
+    <div id="overlay"></div>
+    <div id="lines"></div>
     <nav class="navbar navbar-expand-lg navbar-dark text-info shadow-5-strong" id="nav-bar-settings">
         <div class="d-flex align-items-center justify-content-between w-100">
             <div  class="navbar-brand">
@@ -649,7 +666,7 @@ body {
                     <div class="card-body">
                         <p class="card-title text-white fw-bold " style="padding-left: 30px;"></i>Free | $0.00 USD</p>
                         <p class="card-text" style="padding-left: 30px; color: rgb(217, 217, 217);">
-                            <i class="bi bi-x-circle"></i>
+                            <i class="bi bi-check-circle"></i>
                             &nbsp; 30 Checkouts
                         </p>
                         <p class="card-text" style="padding-left: 30px; color: rgb(217, 217, 217);">
