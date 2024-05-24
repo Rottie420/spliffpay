@@ -1,4 +1,0 @@
-Spliffpay stands as a specialized payment solution meticulously designed to cater to ERC-20 tokens.
-As a cutting-edge tool, it provides a streamlined and efficient platform for handling transactions within the Ethereum ecosystem.
-What sets Spliffpay apart is its user-friendly approach — no installation is required. You can effortlessly navigate and execute
-transactions on Spliffpay across all platforms, making it a versatile solution for businesses and individuals alike.
