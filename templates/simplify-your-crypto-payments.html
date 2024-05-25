@@ -38,17 +38,28 @@
     display: none; 
     }
 }
+
 @media screen and (max-width: 767px) {
     .navbar-logo-left-desktop{
     display: none; 
     }
 }
+
+#nav-bar-settings {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 0.5px solid rgb(198, 198, 198);
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="navbar-logo-left-desktop">
+<div class="navbar-logo-left-desktop" id="nav-bar-settings">
 <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-left-container shadow-three w-nav">
 <div class="container">
 <div class="navbar-wrapper"><a href="#" class="navbar-brand w-nav-brand"><img src="https://assets-global.website-files.com/664ea5008f557c42e27aeb1f/664ea5d0b988eefb01f949d3_black_brandname.png" loading="lazy" width="145" alt=""/></a>
@@ -60,7 +71,7 @@
 </div>
 </div>
 
-<div class="navbar-logo-left-mobile">
+<div class="navbar-logo-left-mobile" id="nav-bar-settings">
 <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar-logo-left-container shadow-three w-nav">
 <div class="container">
 <div class="navbar-wrapper"><a href="#" class="navbar-brand w-nav-brand"><img src="https://assets-global.website-files.com/664ea5008f557c42e27aeb1f/664ea5d0b988eefb01f949d3_black_brandname.png" loading="lazy" width="145" alt=""></a>
@@ -80,7 +91,7 @@
 </div>
 </div>
 
-</div><section class="hero-heading-left" style="border-top: 0.5px solid rgb(198, 198, 198); background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f8f8f8, #f1f1f1, #eaeaea, #dbdbdb, #cccccc, #bdbdbd, #afafaf);">
+</div><section class="hero-heading-left" style="background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f8f8f8, #f1f1f1, #eaeaea, #dbdbdb, #cccccc, #bdbdbd, #afafaf);">
 
 <div class="container-2">
 
