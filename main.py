@@ -11,10 +11,6 @@ if not os.path.exists('data'):
 @app.route('/')
 def home_page():
     return render_template('simplify-your-crypto-payments.html')
-
-@app.route('/01e4dca0-cacc-4790-8254-ad2f13f58cfc.html')
-def verify_page():
-    return render_template('01e4dca0-cacc-4790-8254-ad2f13f58cfc.html')
     
 @app.route('/AufAED35', methods=['GET','POST'])
 def subscribe():
