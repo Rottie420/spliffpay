@@ -21,7 +21,7 @@ def terms_and_condition_page():
     return render_template('terms-and-condition.html', text=text)
     
 @app.route('/privacy-policy', methods=['GET'])
-def terms_and_condition_page():
+def privacy_policy_page():
     f = open(r'static\privacy-policy.txt', encoding='utf-8', mode='r')
     text = f.read()
     f.close()
