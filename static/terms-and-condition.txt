@@ -1,0 +1,41 @@
+<h5 style="font-weight: bold; color: silver">Acceptance of Terms</h5>
+
+1.1 By accessing and using Spliffpay, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, you may not use our services.
+
+<h5 style="font-weight: bold; color: silver">Subscription Services</h5>
+
+2.1 Subscription Plans: Spliffpay offers subscription plans with varying features and transaction capabilities. Users may choose a plan that best suits their needs.
+
+2.2 Subscription Fees: Users are responsible for paying the subscription fees associated with their chosen plan. Fees are non-refundable, as transactions on the blockchain are irreversible.
+
+<h5 style="font-weight: bold; color: silver">User Responsibilities</h5>
+
+3.1 Account Security: Users are responsible for maintaining the security of their Spliffpay accounts, including login credentials and wallet information.
+
+3.2 Compliance: Users must comply with all applicable laws and regulations when using Spliffpay. Any misuse or illegal activities will result in the termination of the user's account.
+
+<h5 style="font-weight: bold; color: silver">Privacy and Data Security</h5>
+
+4.1 Data Handling: Spliffpay prioritizes user privacy and employs industry-standard security measures to protect user data. For detailed information, please refer to our Privacy Policy.
+
+4.2 Third-Party Wallets: Users utilizing third-party wallets, such as Metamask, are subject to the terms and conditions of those wallets. Spliffpay is not responsible for the security and policies of external wallets.
+
+<h5 style="font-weight: bold; color: silver">No-Refund Policy</h5>
+
+5.1 Subscription Fees: Subscription fees are non-refundable. Users are encouraged to review subscription details before committing to a plan.
+
+5.2 Transaction Irreversibility: As a blockchain-based platform, all transactions, including subscription fees, are irreversible.
+
+<h5 style="font-weight: bold; color: silver">Modification of Terms</h5>
+
+6.1 Spliffpay reserves the right to modify these Terms and Conditions at any time. Users will be notified of any changes, and continued use of the platform after modifications constitutes acceptance of the updated terms.
+
+<h5 style="font-weight: bold; color: silver">Termination of Services</h5>
+
+7.1 Spliffpay reserves the right to terminate or suspend services for users who violate these terms or engage in any activities deemed harmful to the platform or its users.
+
+<h5 style="font-weight: bold; color: silver">Contact Information</h5>
+
+8.1 For any questions or concerns regarding these Terms and Conditions, users can contact Spliffpay's customer support through the designated channels provided on the platform.
+
+By using Spliffpay, you acknowledge that you have read, understood, and agree to these Terms and Conditions. Last updated on JAN2024.

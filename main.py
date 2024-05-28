@@ -11,7 +11,23 @@ if not os.path.exists('data'):
 @app.route('/')
 def home_page():
     return render_template('simplify-your-crypto-payments.html')
+
+@app.route('/terms-and-condition', methods=['GET'])
+def terms_and_condition_page():
+    f = open(r'static\terms-and-condition.txt', encoding='utf-8', mode='r')
+    text = f.read()
+    f.close()
+
+    return render_template('terms-and-condition.html', text=text)
     
+@app.route('/privacy-policy', methods=['GET'])
+def terms_and_condition_page():
+    f = open(r'static\privacy-policy.txt', encoding='utf-8', mode='r')
+    text = f.read()
+    f.close()
+
+    return render_template('privacy-policy.html', text=text)
+
 @app.route('/AufAED35', methods=['GET','POST'])
 def subscribe():
     email = request.form.get('Footer-Email')
