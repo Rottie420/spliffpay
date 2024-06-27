@@ -28,6 +28,27 @@ def privacy_policy_page():
 
     return render_template('privacy-policy.html', text=text)
 
+@app.route('/solution', methods=['GET'])
+def solution_page():
+    f = open(r'static\zero-fees.txt', encoding='utf-8', mode='r')
+    text = f.read()
+    f.close()
+
+    f = open(r'static\no-chargebacks.txt', encoding='utf-8', mode='r')
+    text2 = f.read()
+    f.close()
+
+    f = open(r'static\no-registration.txt', encoding='utf-8', mode='r')
+    text3 = f.read()
+    f.close()
+
+    return render_template('solution.html', text=text, text2=text2, text3=text3)
+
+@app.route('/android-pos')
+def android_pos_page():
+
+    return render_template('android-pos.html')
+
 @app.route('/AufAED35', methods=['GET','POST'])
 def subscribe():
     email = request.form.get('Footer-Email')
@@ -52,5 +73,3 @@ def subscribe():
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=5000)
-
-
