@@ -48,6 +48,27 @@ def solution_page():
 def android_pos_page():
 
     return render_template('android-pos.html')
+    
+
+@app.route('/Xkfs98b8dfgsc', methods=['POST'])
+def save_email():
+    email = request.form.get('email')
+    if email and '@' in email: 
+        try:
+            with open('data/subscribers.json', 'r') as f:
+                data = json.load(f)
+        except FileNotFoundError:
+            data = []
+
+        data.append({'email': email})
+
+        with open('data/subscribers.json', 'w') as f:
+            json.dump(data, f, indent=4)
+
+        return render_template('simplify-your-crypto-payments.html')
+    else:
+        return jsonify({'message': 'Invalid email'}), 400
+
 
 @app.route('/AufAED35', methods=['GET','POST'])
 def subscribe():
@@ -67,9 +88,7 @@ def subscribe():
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=4)
 
-    return render_template('simplify-your-crypto-payments.html', 
-                            success="Thank you! Your submission has been received!", 
-                            error="Oops! Something went wrong while submitting the form.")
+    return render_template('simplify-your-crypto-payments.html')
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=5000)
