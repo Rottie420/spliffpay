@@ -51,6 +51,12 @@ def android_pos_page():
     return render_template('android-pos.html')
 
 
+@app.route('/apply-now')
+def apply_now_page():
+
+    return render_template('apply-now.html')
+
+
 @app.route('/Xkfs98b8dfgsc', methods=['POST'])
 def save_email():
     email = request.form.get('email')

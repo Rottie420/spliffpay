@@ -62,43 +62,49 @@
     color: rgb(49, 49, 49);                                           
 }
 
-@media screen and (max-width: 479px) {
-    .view-port {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .view-port {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .view-port {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 1279px) {
-    .view-port {
-        width: 70%;
-    }
-}
-
-.center {
+.responsive-img {
+    width: 100%;
+    height: auto;
     display: block;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
+    margin: 0 auto;
 }
 
-.section {
-    padding: 5px;
-    margin-bottom: 30px;
+.content {
+    margin-top: 300px;
+    margin-bottom: 400px;
 }
 
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+    margin-top: 0;
+}
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-container input[type="submit"] {
+    background-color: #2b2b2b;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-container input[type="submit"]:hover {
+    background-color: #2b2b2b;
+}
 </style>
 </head>
 
@@ -143,56 +149,19 @@
 </div>
 
 <section>
-<img src="static\catalog-3.jpg" class="view-port center">
+<div class="container-2 content">
+<div class="form-container">
+<h2>Join Our Growing List Of Business Partners</h2>
+<form method="post" action="/Xkfs98b8dfgsc">
+<label for="email">Email Address:</label>
+<input type="email" id="email" name="email" required>
+<input type="submit" value="JOIN US NOW">
+</form>
+</div>
+</div>
 </section>
+    
 
-<div style="text-align: center; margin-bottom: 15%;">
-<a href="https://youtu.be/xGdzHuLMX-w" target="_blank" class="button-primary-2 outline-button w-button">Watch a Demo</a>
-</div>
-
-<div class="container-2 section">
-<h4>Power Button</h4>
-<ul>
-<li>Short press: Lights up the screen and locks the screen.</li>
-<li>Long press: In the off state, long press 3-5 seconds to turn on; in the boot state, press and hold for 3-5 seconds, you can choose to shut down or restart.</li>
-<li>In the state of crash or redundancy: long press for more than 10 seconds, automatic shutdown and restart.</li>
-</ul>
-</div>
-
-<div class="container-2 section">
-<h4>Back Button</h4>
-<p>Click to jump back to the previous screen.</p>
-</div>
-
-<div class="container-2 section">
-<h4>Home Screen Button</h4>
-<p>Tap to quickly jump back to the home screen.</p>
-</div>
-
-<div class="container-2 section">
-<h4>Menu Button</h4>
-<p>Click to quickly view the running program, you can select or close the program or application.</p>
-</div>
-
-<div class="container-2 section">
-<h4>Charging Hole</h4>
-<p>Output 5V/2A to charge the device. When the device is charging, the screen will have a corresponding icon prompt. If there is no prompt, please check if the charger is plugged in. This hole should be protected from liquids or short circuits, and the charging device should be forbidden!</p>
-</div>
-
-<div class="container-2 section">
-<h4>SIM Card</h4>
-<p>Support SIM card insertion, network support 3G/4G Unicom Netcom, mobile42G. Note that when the SIM is inserted, please confirm that the device is in the shutdown state to avoid malfunction and unnecessary loss of the machine.</p>
-</div>
-
-<div class="container-2 section">
-<h4>Camera</h4>
-<p>5 megapixel fixed-focus camera for scanning code payment and QR code reading. The general distance is about 15cM is the best state.</p>
-</div>
-
-<div class="container-2 section" style="margin-bottom: 300px;">
-<h4>Printer</h4>
-<p>This device supports 58MM thermal printing paper, the specification is: 57*43 (paper roll diameter) unit mm. Uncover the paper compartment cover of the printer through the upper cover handle, put the appropriate specifications in the correct direction. Roll the paper out and pull out part of the paper out of the cutter, cover the paper cover and finish the printer loading paper.</p>
-</div>
 
 <section class="footer-light" style="border-top: 0.5px solid rgb(198, 198, 198) !important; background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f8f8f8, #f1f1f1, #eaeaea, #dbdbdb, #cccccc, #bdbdbd, #afafaf);">
 
