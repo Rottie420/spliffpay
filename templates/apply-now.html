@@ -75,18 +75,34 @@
 }
 
 .form-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-image: url('static/welcome.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(0, 0, 0);
 }
+
 .form-container h2 {
     margin-top: 0;
+    color: white !important;
 }
+
 .form-container label {
     display: block;
-    margin: 10px 0 5px;
+    margin: 30px 0 5px;
+    color: white !important;
 }
+
 .form-container input[type="email"] {
     width: 100%;
     padding: 10px;
@@ -94,6 +110,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .form-container input[type="submit"] {
     background-color: #2b2b2b;
     color: white;
@@ -102,8 +119,9 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .form-container input[type="submit"]:hover {
-    background-color: #2b2b2b;
+    background-color: #1a1a1a;
 }
 </style>
 </head>

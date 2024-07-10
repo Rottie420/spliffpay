@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        #wrapper {
+            display: flex;
+            width: 100%;
+        }
+
+        #sidebar-wrapper {
+            min-height: 100vh;
+            margin-left: -15rem;
+            -webkit-transition: margin .25s ease-out;
+            -moz-transition: margin .25s ease-out;
+            -o-transition: margin .25s ease-out;
+            transition: margin .25s ease-out;
+        }
+
+        #sidebar-wrapper .sidebar-heading {
+            padding: 0.875rem 1.25rem;
+            font-size: 1.2rem;
+        }
+
+        #sidebar-wrapper .list-group {
+            width: 15rem;
+        }
+
+        #page-content-wrapper {
+            min-width: 100vw;
+        }
+
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: 0;
+        }
+
+        @media (min-width: 768px) {
+            #sidebar-wrapper {
+                margin-left: 0;
+            }
+
+            #page-content-wrapper {
+                min-width: 0;
+                width: 100%;
+            }
+
+            #wrapper.toggled #sidebar-wrapper {
+                margin-left: -15rem;
+            }
+        }
+
+        .table-responsive.fixed-height {
+            max-height: 400px;  /* Adjust the height as needed */
+            overflow-y: auto;
+        }
+
+        #statusChart {
+            max-width: 200px;
+            max-height: 200px;
+            margin: auto;
+        }
+
+        .legend-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .subscription-card {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /*background-color: #f9f9f9;*/
+        }
+
+        .subscription-card h3 {
+            font-size: 1.5rem; /* Adjust font size as needed */
+        }
+
+        .subscription-card .subscription-count {
+            font-size: 4.5rem; /* Adjust font size as needed */
+            margin-top: 30px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Admin Dashboard</div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                <a href="/" class="list-group-item list-group-item-action bg-light">Logout</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <i class="bi bi-sliders" id="menu-toggle" style="font-size: 1.5rem"></i>
+            </nav>
+
+            <div class="container-fluid">
+                <h1 class="mt-4">Email Campaign Dashboard</h1>
+
+                <!-- Other Content -->
+                <div class="row mt-3">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="subscription-card h-100">
+                            <h5>Total Subscription</h5>
+                            <p class="subscription-count">{{ total_subscription }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="subscription-card h-100">
+                            <h5>Campaign Duration</h5>
+                            <p class="subscription-count">{{ total_duration }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Source Overview</h5>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <canvas id="statusChart"></canvas>
+                                    <ul class="legend-list" id="legendList"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chart Section -->
+                <div class="row mt-3">
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Subscription Overview</h5>
+                                <canvas id="salesChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logs Section -->
+                    <div class="col-lg-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Recent Logs</h5>
+                                <div class="table-responsive fixed-height">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Datetime</th>
+                                                <th>Event</th>
+                                                <th>Details</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for log in logs %}
+                                            <tr>
+                                                <td>{{ log.datetime }}</td>
+                                                <td>{{ log.event }}</td>
+                                                <td>{{ log.details }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Menu toggle
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
+        // Sales Chart
+        const salesCtx = document.getElementById('salesChart').getContext('2d');
+        const salesData = {{ sales_data | tojson }};
+        const salesChart = new Chart(salesCtx, {
+            type: 'line',
+            data: {
+                labels: salesData.labels,
+                datasets: [{
+                    label: 'Sales',
+                    data: salesData.data,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        ticks: {
+                            callback: function(value) {
+                                if (Number.isInteger(value)) {
+                                    return value;
+                                }
+                                return null;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Status Chart
+        const statusCtx = document.getElementById('statusChart').getContext('2d');
+        const dataValues = [{{ count_1|tojson }}, {{ count_2|tojson }}, {{ count_3|tojson }}, {{ count_4|tojson }}];
+        const statusData = {
+            labels: [{{ event_1|tojson }}, {{ event_2|tojson }}, {{ event_3|tojson }}, {{ event_4|tojson }}].map((label, index) => `${label} (${dataValues[index]})`),
+            datasets: [{
+                label: 'Status',
+                data: dataValues,
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const statusChart = new Chart(statusCtx, {
+            type: 'doughnut',
+            data: statusData,
+            options: {
+                cutout: '80%', // Adjust this value to make the doughnut thinner
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        enabled: true,
+                    }
+                }
+            }
+        });
+
+        // Custom Legend
+        const legendList = document.getElementById('legendList');
+        statusData.labels.forEach((label, index) => {
+            const listItem = document.createElement('li');
+            listItem.className = 'legend-item';
+            const colorBox = document.createElement('span');
+            colorBox.className = 'legend-color';
+            colorBox.style.backgroundColor = statusData.datasets[0].backgroundColor[index];
+            listItem.appendChild(colorBox);
+            listItem.appendChild(document.createTextNode(label));
+            legendList.appendChild(listItem);
+        });
+
+    </script>
+</body>
+</html>
