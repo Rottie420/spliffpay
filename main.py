@@ -204,7 +204,7 @@ def admin_dashboard_page():
     df = pd.DataFrame(df)
     logs = sorted(df.to_dict(orient='records'), key=lambda x: x['datetime'], reverse=True)
 
-    total_subscription = df['event'].count() 
+    total_subscription = df['event'].count() - 1 
 
     df['datetime'] = pd.to_datetime(df['datetime'])
     first_datetime = df['datetime'].min()
