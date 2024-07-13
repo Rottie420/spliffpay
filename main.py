@@ -70,6 +70,11 @@ def blog_email_list_page():
 def x_email_list_page():
 
     return render_template('x-post-email.html')
+
+@app.route('/Casd57lxzv')
+def x_email_list_2_page():
+
+    return render_template('x-post-email-2.html')
     
 
 @app.route('/Psdfcjbssd43')
@@ -145,7 +150,7 @@ def x_email_list():
         with open('data/subscribers.json', 'w') as f:
             json.dump(data, f, indent=4)
 
-        return render_template('welcome.html')
+        return render_template('demo-wallet-address.html')
     else:
         return jsonify({'message': 'Invalid email'}), 400
 
@@ -204,7 +209,7 @@ def admin_dashboard_page():
     df = pd.DataFrame(df)
     logs = sorted(df.to_dict(orient='records'), key=lambda x: x['datetime'], reverse=True)
 
-    total_subscription = df['event'].count() - 1 
+    total_subscription = df['event'].count() - 1
 
     df['datetime'] = pd.to_datetime(df['datetime'])
     first_datetime = df['datetime'].min()

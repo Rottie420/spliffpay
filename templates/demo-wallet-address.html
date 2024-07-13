@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promo Code Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+        .promo-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 100%;
+            width: 400px;
+        }
+        .promo-code {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+        }
+        .copy-button,
+        .login-button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 200px;
+            margin-top: 10px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .copy-button:hover,
+        .login-button:hover {
+            background-color: #333;
+        }
+        .confirmation {
+            margin-top: 10px;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .promo-code {
+                font-size: 1.2em;
+            }
+            .copy-button,
+            .login-button {
+                padding: 10px;
+                font-size: 0.9em;
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="promo-container">
+        <div class="promo-code" id="promoCode">0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5</div>
+        <a class="login-button" onclick="copyPromoCode()">Copy Code</a>
+        <a class="login-button" href="https://www.spliffpay.biz/login">Login Now</a>
+        <div class="confirmation" id="confirmationMessage"></div>
+    </div>
+
+    <script>
+        function copyPromoCode() {
+            const promoCodeElement = document.getElementById('promoCode');
+            const promoCode = promoCodeElement.innerText;
+
+            const textArea = document.createElement('textarea');
+            textArea.value = promoCode;
+            document.body.appendChild(textArea);
+            textArea.select();
+            textArea.setSelectionRange(0, 99999); // For mobile devices
+
+            try {
+                document.execCommand('copy');
+                const confirmationMessage = document.getElementById('confirmationMessage');
+                confirmationMessage.innerText = 'Wallet-address copied to clipboard!';
+                setTimeout(() => {
+                    confirmationMessage.innerText = '';
+                }, 2000);
+            } catch (err) {
+                console.error('Could not copy text: ', err);
+            }
+
+            document.body.removeChild(textArea);
+        }
+    </script>
+</body>
+</html>
