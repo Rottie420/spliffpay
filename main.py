@@ -111,7 +111,7 @@ def save_email():
         with open('data/subscribers.json', 'w') as f:
             json.dump(data, f, indent=4)
 
-        return render_template('welcome.html')
+        return render_template('demo-wallet-address.html')
     else:
         return jsonify({'message': 'Invalid email'}), 400
 
