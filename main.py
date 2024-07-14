@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify, render_template
 from datetime import datetime
-from collections import defaultdict
 import json
 import os
 import pandas as pd
@@ -11,9 +10,11 @@ app.config['SECRET_KEY'] = 'my_secret_key'
 if not os.path.exists('data'):
     os.makedirs('data')
 
+
 @app.route('/')
 def home_page():
     return render_template('simplify-your-crypto-payments.html')
+
 
 @app.route('/terms-and-condition', methods=['GET'])
 def terms_and_condition_page():
@@ -22,6 +23,7 @@ def terms_and_condition_page():
     f.close()
 
     return render_template('terms-and-condition.html', text=text)
+
     
 @app.route('/privacy-policy', methods=['GET'])
 def privacy_policy_page():
@@ -30,6 +32,7 @@ def privacy_policy_page():
     f.close()
 
     return render_template('privacy-policy.html', text=text)
+
 
 @app.route('/solution', methods=['GET'])
 def solution_page():
@@ -81,6 +84,12 @@ def x_email_list_2_page():
 def fb_email_list_page():
 
     return render_template('fb-post-email.html')
+
+
+@app.route('/Nmasy898csaws')
+def fb_email_list_2_page():
+
+    return render_template('fb-post-email-2.html')
 
 
 @app.route('/Xkfs98b8dfgsc', methods=['POST'])
@@ -153,6 +162,7 @@ def x_email_list():
         return render_template('demo-wallet-address.html')
     else:
         return jsonify({'message': 'Invalid email'}), 400
+        
 
 
 @app.route('/Gcxaiuhas09', methods=['POST'])
@@ -174,7 +184,7 @@ def fb_email_list():
         with open('data/subscribers.json', 'w') as f:
             json.dump(data, f, indent=4)
 
-        return render_template('welcome.html')
+        return render_template('demo-wallet-address.html')
     else:
         return jsonify({'message': 'Invalid email'}), 400
 
