@@ -141,31 +141,6 @@ def blog_email_list():
 
 
 @app.route('/Bsdfvx874d', methods=['POST'])
-def x_email_list():
-    email = request.form.get('email')
-    if email and '@' in email: 
-        try:
-            with open('data/subscribers.json', 'r') as f:
-                data = json.load(f)
-        except FileNotFoundError:
-            data = []
-
-        data.append({
-        "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        "details": email,
-        "event": "x"
-        })
-
-        with open('data/subscribers.json', 'w') as f:
-            json.dump(data, f, indent=4)
-
-        return render_template('demo-wallet-address.html')
-    else:
-        return jsonify({'message': 'Invalid email'}), 400
-        
-
-
-@app.route('/Gcxaiuhas09', methods=['POST'])
 def fb_email_list():
     email = request.form.get('email')
     if email and '@' in email: 
@@ -179,6 +154,31 @@ def fb_email_list():
         "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "details": email,
         "event": "fb"
+        })
+
+        with open('data/subscribers.json', 'w') as f:
+            json.dump(data, f, indent=4)
+
+        return render_template('demo-wallet-address.html')
+    else:
+        return jsonify({'message': 'Invalid email'}), 400
+        
+
+
+@app.route('/Gcxaiuhas09', methods=['POST'])
+def x_email_list():
+    email = request.form.get('email')
+    if email and '@' in email: 
+        try:
+            with open('data/subscribers.json', 'r') as f:
+                data = json.load(f)
+        except FileNotFoundError:
+            data = []
+
+        data.append({
+        "datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "details": email,
+        "event": "x"
         })
 
         with open('data/subscribers.json', 'w') as f:
