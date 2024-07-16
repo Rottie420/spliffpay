@@ -48,7 +48,19 @@ def solution_page():
     text3 = f.read()
     f.close()
 
-    return render_template('solution.html', text=text, text2=text2, text3=text3)
+    f = open(r'static\contactless-payment.txt', encoding='utf-8', mode='r')
+    text4 = f.read()
+    f.close()
+
+    f = open(r'static\handheld-pos.txt', encoding='utf-8', mode='r')
+    text5 = f.read()
+    f.close()
+
+    f = open(r'static\cross-platform.txt', encoding='utf-8', mode='r')
+    text6 = f.read()
+    f.close()
+
+    return render_template('solution.html', text=text, text2=text2, text3=text3, text4=text4, text5=text5, text6=text6)
 
 
 @app.route('/android-pos')
