@@ -168,6 +168,7 @@ a {
     width: 95%; /* Could be more or less, depending on screen size */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
+    text-align: center;
 }
 
 /* Close button */
@@ -202,9 +203,12 @@ a {
     padding: 10px 20px;
     border: None;
     border-radius: 20px;
-    margin-bottom: 50px;
     cursor: pointer;
 
+}
+
+.signup-form input::placeholder {
+    text-align: center;
 }
 
 .signup-form input[type="submit"]:hover {
@@ -898,9 +902,9 @@ Does Spliffpay offer refunds for transactions and subscriptions?
     <span class="close">&times;</span>
     <h3 style="margin-top: 50px;">Sign-up to access demo</h3>
     <form class="signup-form" action="/Xkfs98b8dfgsc" method="POST">
-    <label for="email">Enter email:</label>
-    <input type="email" id="email" name="email" required>
+    <input placeholder="Enter email" type="email" id="email" name="email" required>
     <input type="submit" value="Submit">
+    <h6 style="margin-bottom: 50px; margin-top: 10px; font-size: 10px;">Your privacy is important to us.</h6>
     </form>
 </div>
 
