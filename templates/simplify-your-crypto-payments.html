@@ -28,7 +28,7 @@
 <meta name="trustpilot-one-time-domain-verification-id" content="95d7925d-e9b8-44c7-997b-9591966bf82b"/>
 
 <link rel="canonical" href="https://www.spliffpay.xyz/canonical-version">
-<link href="https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/css/spliffpay-revamp.webflow.cb4b2db53.css" rel="stylesheet" type="text/css"/>
+<link href="https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/css/spliffpay-revamp.webflow.3383f96db.css" rel="stylesheet" type="text/css"/>
 <link href="static/favicon.png" rel="shortcut icon" type="image/x-icon"/>
 <link href="https://assets-global.website-files.com/img/webclip.png" rel="apple-touch-icon"/>
 <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55?styles=16012" rel="stylesheet">
@@ -164,13 +164,16 @@ a {
     margin: 30% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 100%; /* Could be more or less, depending on screen size */
+    border-radius: 20px;
+    width: 95%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 400px;
 }
 
 /* Close button */
 .close {
-    color: #aaa;
+    background-color: white;
+    color: black;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -189,14 +192,19 @@ a {
     padding: 10px;
     margin: 10px 0;
     box-sizing: border-box;
+    border-radius: 20px;
 }
 
 .signup-form input[type="submit"] {
+    width: 100%;
     background-color: #333;
     color: white;
     padding: 10px 20px;
-    border: none;
+    border: None;
+    border-radius: 20px;
+    margin-bottom: 50px;
     cursor: pointer;
+
 }
 
 .signup-form input[type="submit"]:hover {
@@ -888,7 +896,7 @@ Does Spliffpay offer refunds for transactions and subscriptions?
 <!-- Modal content -->
 <div class="popup-content">
     <span class="close">&times;</span>
-    <h3>Sign-up to access demo</h3>
+    <h3 style="margin-top: 50px;">Sign-up to access demo</h3>
     <form class="signup-form" action="/Xkfs98b8dfgsc" method="POST">
     <label for="email">Enter email:</label>
     <input type="email" id="email" name="email" required>
