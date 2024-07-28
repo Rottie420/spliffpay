@@ -50,12 +50,25 @@
     .navbar-logo-left-mobile {
     display: none; 
     }
+
+    .section-width {
+    max-width: 50%;
+    }
 }
 
 @media screen and (max-width: 767px) {
     .navbar-logo-left-desktop{
     display: none; 
     }
+
+    .section-width {
+    max-width: 90%
+    }
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 #nav-bar-settings {
@@ -70,7 +83,7 @@
 #hero-font {
     font-family: 'Helvetica Neue', sans-serif;   
     font-weight: 600;
-    color: rgb(49, 49, 49);                                           
+    color: rgb(49, 49, 49);                                          
 }
 
 #card-problems {
@@ -215,6 +228,8 @@ a {
 .signup-form input[type="submit"]:hover {
     background-color: #333;
 }
+
+
 </style>
 </head>
 
@@ -257,7 +272,7 @@ a {
 </div>
 </div>
 
-</div><section class="hero-heading-left" style="margin-top: 100px; background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f8f8f8, #f1f1f1, #eaeaea, #dbdbdb, #cccccc, #bdbdbd, #afafaf);">
+</div><section class="hero-heading-left" style="overflow-x: hidden; margin-top: 100px; background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f8f8f8, #f1f1f1, #eaeaea, #dbdbdb, #cccccc, #bdbdbd, #afafaf);">
 
 <div class="container-2">
 
@@ -265,11 +280,11 @@ a {
 
 <div class="hero-split"><h1 class="heading-2" id="hero-font">Transform any mobile device into a powerful business tool</h1>
 
-<p class="margin-bottom-24px">Upgrade your business operations with easy-to-use tools that seamlessly integrate crypto payments.
-</p><a href="https://www.spliffpay.biz/login" class="button-primary-2 w-button">Get Started</a>
+<p id="description" class="margin-bottom-24px">Upgrade your business operations with easy-to-use tools that seamlessly integrate crypto payments.
+</p><a href="https://www.spliffpay.biz/login" class="button-primary-2 w-button reveal-button">Get Started</a>
 </div>
 
-<div class="hero-split"><img src="https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/665aaec94429acb475fbf67d_mock-up-hero-img.png" loading="lazy" width="440" sizes="(max-width: 479px) 92vw, (max-width: 991px) 440px, (max-width: 1279px) 43vw, 432.390625px" alt="" srcset="https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/665aaec94429acb475fbf67d_mock-up-hero-img-p-500.png 500w, https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/665aaec94429acb475fbf67d_mock-up-hero-img-p-800.png 800w, https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/665aaec94429acb475fbf67d_mock-up-hero-img.png 1000w" class="shadow-two"/>
+<div class="hero-split" id="hero-img"><img src="https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/665aaec94429acb475fbf67d_mock-up-hero-img.png" loading="lazy" width="440" sizes="(max-width: 479px) 92vw, (max-width: 991px) 440px, (max-width: 1279px) 43vw, 432.390625px" alt="" srcset="https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/665aaec94429acb475fbf67d_mock-up-hero-img-p-500.png 500w, https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/665aaec94429acb475fbf67d_mock-up-hero-img-p-800.png 800w, https://cdn.prod.website-files.com/664ea5008f557c42e27aeb1f/665aaec94429acb475fbf67d_mock-up-hero-img.png 1000w" class="shadow-two"/>
 </div>
 </div>
 
@@ -283,7 +298,9 @@ a {
 <a href="https://www.indiehackers.com"><img  src="https://assets-global.website-files.com/664ea5008f557c42e27aeb1f/664eb7b18e57932b90002e24_indiehackewrs-black.jpg" loading="lazy" width="212" id="w-node-e2118b03-d337-cde0-8faa-c0d06e044924-e27aeb61" alt="OE logo" srcset="https://assets-global.website-files.com/664ea5008f557c42e27aeb1f/664eb7b18e57932b90002e24_indiehackewrs-black-p-500.jpg 500w, https://assets-global.website-files.com/664ea5008f557c42e27aeb1f/664eb7b18e57932b90002e24_indiehackewrs-black.jpg 700w" sizes="(max-width: 479px) 44vw, 212px" class="clients-image-three"/></a>
 <a href="https://x.com/spliffpay"><img  src="https://assets-global.website-files.com/664ea5008f557c42e27aeb1f/664eb90a999abd75a812f19e_followus-black.jpg" loading="lazy" width="212" id="w-node-_63a6f9bc-93fb-9fd1-4fe5-6140c4682c0e-e27aeb61" alt="OE logo" srcset="https://assets-global.website-files.com/664ea5008f557c42e27aeb1f/664eb90a999abd75a812f19e_followus-black-p-500.jpg 500w, https://assets-global.website-files.com/664ea5008f557c42e27aeb1f/664eb90a999abd75a812f19e_followus-black.jpg 700w" sizes="(max-width: 479px) 44vw, 212px" class="clients-image-three"/></a>
 </div>
-</div></section><section class="testimonial-image-left" style="border-bottom: 1px solid white !important;">
+</div></section>
+
+<section id="product-1" class="testimonial-image-left section-width" style="border-bottom: 1px solid white !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin: 0 auto; border-radius: 20px;">
 
 <div class="container-2">
 
@@ -305,7 +322,11 @@ a {
 
 </div>
 </div>
-</div></section><section class="testimonial-image-left" style="border-bottom: 1px solid white !important;">
+</div></section>
+
+<div style="margin-bottom: 30px;"></div>
+
+<section id="product-2" class="testimonial-image-left section-width" style="border-bottom: 1px solid white !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin: 0 auto; border-radius: 20px;">
 
 <div class="container-2">
 
@@ -329,7 +350,9 @@ a {
 </div>
 </div></section>
 
-<section class="testimonial-image-left" style="border-bottom: 1px solid white !important;">
+<div style="margin-bottom: 30px;"></div>
+
+<section id="product-3" class="testimonial-image-left section-width" style="border-bottom: 1px solid white !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin: 0 auto; border-radius: 20px;">
 
 <div class="container-2">
 
@@ -353,7 +376,9 @@ a {
 </div>
 </div></section>
 
-<section class="testimonial-image-left" style="border-bottom: 1px solid white !important;">
+<div style="margin-bottom: 30px;"></div>
+
+<section id="product-4" class="testimonial-image-left section-width" style="border-bottom: 1px solid white !important; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); margin: 0 auto; border-radius: 20px;">
 
 <div class="container-2">
 
@@ -377,6 +402,7 @@ a {
 </div>
 </div></section>
 
+<div style="margin-bottom: 150px;"></div>
 
 <section class="footer-subscribe" style="background-color: #f5f7fa; border-bottom: 1px solid white !important;">
 <div class="container-3">
@@ -902,7 +928,7 @@ Does Spliffpay offer refunds for transactions and subscriptions?
 <!-- Modal content -->
 <div class="popup-content">
     <span class="close">&times;</span>
-    <h3 style="margin-top: 50px;">Sign-up to access demo</h3>
+    <h3 style="margin-top: 50px;">Are you ready for demo?</h3>
     <form class="signup-form" action="/Xkfs98b8dfgsc" method="POST">
     <input placeholder="Enter email" type="email" id="email" name="email" required>
     <input type="submit" value="Submit">
@@ -937,7 +963,7 @@ Does Spliffpay offer refunds for transactions and subscriptions?
         modal.style.display = "block";
     }, 3000);
     }
-  </script>
+</script>
 
 <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=664ea5008f557c42e27aeb1f" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
 </script>
@@ -979,6 +1005,68 @@ Does Spliffpay offer refunds for transactions and subscriptions?
       });
     });
 </script>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script>
+    
+    const scrollRevealOption = {
+        distance: "50px",
+        origin: "bottom",
+        duration: 1000,
+    };
+
+    ScrollReveal().reveal("#hero-font", {
+        ...scrollRevealOption,
+        origin: "left",
+        delay: 500,
+    });
+
+    ScrollReveal().reveal("#description", {
+        ...scrollRevealOption,
+        origin: "left",
+        delay: 500,
+    });
+
+    ScrollReveal().reveal(".reveal-button", {
+        ...scrollRevealOption,
+        origin: "left",
+        delay: 500,
+    });
+
+    ScrollReveal().reveal("#hero-img", {
+        ...scrollRevealOption,
+        origin: "right",
+        delay: 1000,
+    });
+
+    ScrollReveal().reveal("#product-1", {
+        ...scrollRevealOption,
+        origin: "left",
+        delay: 500,
+    });
+
+    ScrollReveal().reveal("#product-2", {
+        ...scrollRevealOption,
+        origin: "left",
+        delay: 500,
+    });
+
+    ScrollReveal().reveal("#product-3", {
+        ...scrollRevealOption,
+        origin: "left",
+        delay: 500,
+    });
+
+    ScrollReveal().reveal("#product-4", {
+        ...scrollRevealOption,
+        origin: "left",
+        delay: 500,
+    });
+
+</script>
+
+
 
 </body>
 </html>
